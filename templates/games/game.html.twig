@@ -1,0 +1,185 @@
+{% extends 'base.html.twig' %}
+{% block style %}
+    <link rel="stylesheet" href="{{ asset('css/Game.css') }}">
+{% endblock %}
+
+{% block title %}
+    {{game_name}}
+{% endblock %}
+
+{% block content %}
+
+    <section class="container-fluid">
+        <div class="card">
+            <img src="{{ asset('images/pes2020.gif') }}" class="card-img-top "  alt="PES2020" >
+            <div class="card-body">
+                <h4 class="card-title">PES  2020</h4>
+                <p class="card-text">
+                    eFootball PES 2020 is a male football video game from the eFootball PES series developed by PES Productions
+                    and published by Konami. This new opus is the 19ᵉ from the PES series. The game was originally released on September 10,
+                    2019 on PlayStation 4, Xbox One and Microsoft Windows. Wikipedia
+                    <br> <br>
+                    Genre(s) : 	Sports
+                    <br> <br>
+
+                    Original release date  : July 30, 2019
+                    <br> <br>
+                    License  : FIFPro
+                    <br> <br>
+                    Game mode  : Single player, multiplayer
+                    <br> <br>
+                    Engine  : Fox Engine
+                    <br> <br>
+                    Modes  : Solo , Multiplayer
+                    <br> <br>
+                    Platforms  : PlayStation 4, Android, Xbox One, Microsoft Windows, iOS
+                </p>
+                <p class="card-text"><small class="text-muted"> &copy; credit to konami company </small></p>
+            </div>
+        </div>
+        <div class="card">
+            <iframe width="850" height="506" src="https://www.youtube.com/embed/V-mDyfoYYc8"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            {% block article %}
+            <article>
+                eFootball PES 2020 (eFootball Pro Evolution Soccer 2020) is a football simulation video game developed by PES Productions
+                and published by Konami for Microsoft Windows, PlayStation 4, Xbox One, Android and IOS.
+                The game is the 19th installment in the Pro Evolution Soccer series and was launched worldwide on 10 September 2019,
+                and was launched in Japan on 12 September 2019. The new game features a name change with the addition of 'eFootball'
+                within the title, symbolizing a push in the online gaming space with a focus on eFootball Pro tournaments.
+                Lionel Messi returns as the cover star of the standard edition, since his last appearance on the Pro Evolution Soccer 2011 cover,
+                alongside Pro Evolution Soccer ambassadors Serge Gnabry, Miralem Pjanić and Scott McTominay,
+                each representing one of the game's partner clubs.Ronaldinho will feature on the cover of the legend edition.
+                <br> <br>
+                <strong> Club partnerships : </strong>
+                <br>
+                Barcelona :
+                A renewed agreement between Konami and Barcelona, was announced signalling a continued relationship with
+                the Spanish football club. Together with this announcement it was also confirmed that a special Barcelona
+                edition will be released.
+                <br>
+                Manchester United :
+                Manchester United and Konami announced an agreement which would see the club,
+                its stadiums and players recreated within the game. The current squad have also been created using a full-body 3D
+                scanning process, providing players of the game with ultra-realistic avatars.
+                <br>
+                Bayern Munich :
+                After the announcement of the demo — which came out on 30 July 2019,
+                FC Bayern Munich was announced as an official partner club. Players will have the full experience with authentic kits,
+                full 3D scanned players and, exclusively, Bayern's home ground, Allianz Arena.
+                <br>
+                Juventus :
+                Juventus signed an exclusive partnership with the game,
+                which will see it includes the club kits, player names and stadium with realistic likeness in game and
+                also making it the first time in 25 years that the FIFA series will not hold the licence for the club.
+                <br>
+                Arsenal :
+                On 28 June 2019, Arsenal announced a 3-year extension to their partnership with Konami,
+                which would see a highly detailed recreation of Emirates Stadium, as well as access to club legends and first-team players.
+                <br> <br> <br>
+                <strong> Games modes : </strong>
+                <br>
+                Included for the first time in the PES series, there is a new game mode called Matchday Mode.
+                Players around the world will help their team to glory one match at a time in the new Matchday mode.
+                Konami will choose an important match or derby game each week, players will then be able to decide which
+                team they want to represent on Matchday.
+                <br>
+                Master League has also received a number of revamps, most notably containing a story-like progression,
+                with all-new cutscenes taking place in staff meetings, training sessions or press conferences, as well as objectives
+                to be accomplished based on replies given by the player on those cutscenes.
+                <br> <br> <br>
+                <strong>  Competitions : </strong>
+                <br>
+                Eighteen leagues are fully licensed in the game. All the teams in these leagues feature real players, kits and logos,
+                although a minority of the players in the Brazilian leagues still appear with generic names.
+                Three new league licenses were obtained: the Italian Serie A, Italian Serie B (unlicensed at launch),
+                and the Brazilian Campeonato Brasileiro Série B.
+                <br>
+                Konami have retained the licence for the AFC Champions League, remaining in the game since its introduction in PES 2014.
+                With this, debutants for 2019 AFC Champions League, Gyeongnam, Daegu and Johor Darul Ta'zim also appear for the first time
+                in this franchise.
+                <br>
+                The English Premier League (with the exceptions of Manchester United and Arsenal), EFL Championship, Spanish La Liga
+                (except for Barcelona and Mallorca) and Segunda División will appear as unlicensed leagues in the game. These leagues will,
+                however, feature real players. Serie A have all clubs licensed, except Brescia.
+                <br>
+                Thai and Chinese top league are included.
+            </article>
+            {% endblock %}
+        </div>
+        <div class="card">
+            <img src="{{ asset('images/PES2020-2.gif') }}"  class="card-img-top "  alt="PES 2020" >
+            <div class="card-body">
+                <h4 class="card-title">Related to this game:</h4>
+                <p> </p>
+                <div class="card hvr-grow-shadow">
+                    <a href="#"  >
+                        <img src="{{ asset('images/pes2019.jpg') }}" class="card-img-top" alt="PES 2019">
+                        <div class="card-body"><p> Pro Evolution Soccer 2019 </p> </div>
+                    </a>
+                </div>
+                <div class="card hvr-grow-shadow">
+                    <a href="#">
+                        <img src="{{ asset('images/FIFA2020.jpg') }}" class="card-img-top" alt="FIFA 20">
+                        <div class="card-body"><p> FIFA 20 </p> </div>
+                    </a>
+                </div>
+                <div class="card hvr-grow-shadow">
+                    <a href="#">
+                        <img src="{{ asset('images/PES2018.jpg') }}" class="card-img-top" alt="PES 2018">
+                        <div class="card-body"><p> Pro Evolution Soccer 2018 </p> </div>
+                    </a>
+                </div>
+                <div class="card hvr-grow-shadow ">
+                    <a href="#">
+                        <img src="{{ asset('images/PES2017.jpg') }}" class="card-img-top" alt="PES 2017">
+                        <div class="card-body"><p> Pro Evolution Soccer 2017 </p> </div>
+                    </a>
+                </div>
+                <div class="card hvr-grow-shadow">
+                    <a href="#">
+                        <img src="{{ asset('images/PES2013.jpg') }}" class="card-img-top" alt="PES 2013">
+                        <div class="card-body"><p> Pro Evolution Soccer 2013 </p> </div>
+                    </a>
+                </div>
+                <div class="card hvr-grow-shadow">
+                    <a href="#">
+                        <img src="{{ asset('images/PES2011.jpg') }}" class="card-img-top" alt="PES 2011">
+                        <div class="card-body"><p> Pro Evolution Soccer 2011 </p> </div>
+                    </a>
+                </div>
+                <h5 class="card-title">games related to the company of this game : </h5>
+                <p></p>
+                <div class="card hvr-grow-shadow">
+                    <a href="#">
+                        <img src="{{ asset('images/PES2008.jpg') }}" class="card-img-top" alt="PES 2008">
+                        <div class="card-body"><p> Pro Evolution Soccer 2008 </p> </div>
+                    </a>
+                </div>
+                <div class="card hvr-grow-shadow">
+                    <a href="#">
+                        <img src="{{ asset('images/yu-gi-oh.jpg') }}" class="card-img-top" alt="YU-GI-OH">
+                        <div class="card-body"><p> YU-GI-OH </p> </div>
+                    </a>
+                </div>
+                <div class="card hvr-grow-shadow">
+                    <a href="#">
+                        <img src="{{ asset('images/silent-hill.jpg') }}" class="card-img-top" alt="silent hills">
+                        <div class="card-body"><p> silent hills</p> </div>
+                    </a>
+                </div>
+                <div class="card hvr-grow-shadow">
+                    <a href="#">
+                        <img src="{{ asset('images/Probotector.jpg') }}" class="card-img-top" alt="Probotector">
+                        <div class="card-body"><p> Probotector </p> </div>
+                    </a>
+                </div>
+                <p class="card-text"><small class="text-muted">  &copy; credit to konami company </small></p>
+            </div>
+        </div>
+
+
+    </section>
+
+{% endblock %}

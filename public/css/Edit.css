@@ -1,0 +1,22 @@
+.container-fluid{
+    width: 70%;
+}
+.container-fluid .card{
+    padding-bottom: 2%;
+}
+.wrap-login100-form-btn{
+    width: 40%;
+}
+.container-fluid .card .card-img {
+    width: 90%;
+    margin-top: 6%;
+}
+.container-fluid .card form{
+    width: 90%;
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 8%;
+}
+h5{
+    float: none;
+}

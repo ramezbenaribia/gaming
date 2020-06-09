@@ -1,0 +1,864 @@
+/****************************  HEADER *************************************/
+
+header {
+    margin-bottom: 50px;
+}
+
+/* Create a sticky/fixed navbar */
+#header-nav {
+    padding: 15px 10px; /* Large padding which will shrink on scroll (using JS) */
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    width: 100%;
+    height: 100px;
+    z-index: 99;
+    background-color: #122636;
+    opacity: 0.9;
+
+
+}
+
+
+/* The fade_in when scrolling */
+.fade_in {
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+}
+
+.fade_in.appear {
+    opacity: 1;
+}
+
+
+/* Style the navbar links */
+#header-nav div ul li a {
+    color: #b2dbe6;
+    text-align: center;
+    padding: 12px;
+    text-decoration: wavy;
+    font-size: 20px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 15px;
+}
+
+#header-nav a img {
+    padding-left: 0;
+    margin-right: 40px;
+    margin-left: 1px;
+}
+
+#collapsable-nav svg {
+    margin-right: 5px;
+}
+
+.dropdown-menu {
+    background-color: #194d70 !important;
+}
+
+.dropdown-item:hover {
+    background-color: #485458;
+}
+
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
+}
+
+.navbar-header button.navbar-toggler {
+    border: 1px solid #194d70;
+}
+
+.navbar-header .icon-bar {
+    color: #194d70;
+}
+
+.navbar-header button.navbar-toggler {
+    clear: both;
+    margin-top: -30px;
+}
+
+.sticky {
+    position: fixed !important;
+    top: 0 !important;
+}
+
+
+/**** navbar login and sign in ****/
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+.button {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 2%;
+    float: left;
+}
+
+.button span {
+    position: absolute;
+    margin: auto 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    width: auto;
+
+}
+
+.button svg {
+    height: 55px;
+    width: 150px;
+    fill: none;
+    stroke-width: 7;
+    border-radius: 10px !important;
+}
+
+#header-nav .button span svg {
+    height: auto;
+    width: auto;
+    fill: #194d70;
+
+}
+
+.button svg .o1 {
+    stroke: #194d70;
+    fill: #b2dbe6;
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+
+}
+
+.button svg .o2 {
+    stroke: rgb(210, 228, 236);
+    stroke-dasharray: 20 420;
+    stroke-dashoffset: 20;
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+
+}
+
+
+.button:hover .o1 {
+    fill: rgb(234, 236, 238);
+
+}
+
+.button:hover .o2 {
+    stroke-dashoffset: -420;
+
+}
+
+/*** END of the login and sign in ***/
+
+/*** button for search***/
+#collapsable-nav form {
+
+    position: relative;
+    right: 20px;
+
+}
+
+#searchbar2 {
+    position: relative;
+    right: 40px;
+
+}
+
+#collapsable-nav form button {
+    position: absolute;
+    right: 0;
+    float: left;
+
+}
+
+#collapsable-nav form input {
+
+    color: #194d70;
+    border: 1px solid #194d70;
+    float: left;
+}
+
+
+.btn-outline-dark {
+    color: #194d70;
+    border: 1px solid #194d70;
+}
+
+.btn-outline-dark:hover {
+    color: #194d70;
+    background-color: #b2dbe6;
+}
+
+/***** END  button for search***/
+
+
+/***** HOVER EFFECTS ******/
+/***** Grow Rotate *****/
+.hvr-grow-rotate {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+    -webkit-transform: scale(1.1) rotate(4deg);
+    transform: scale(1.1) rotate(4deg);
+}
+
+
+/****** Float Shadow ******/
+.hvr-float-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.hvr-float-shadow:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    /* W3C */
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+}
+
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    /* move the element up by 5px */
+}
+
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
+
+/****** Grow Shadow *******/
+.hvr-grow-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* Box Shadow Outset */
+.hvr-box-shadow-outset {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+}
+
+.hvr-box-shadow-outset:hover, .hvr-box-shadow-outset:focus, .hvr-box-shadow-outset:active {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Box Shadow Inset */
+.hvr-box-shadow-inset {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0);
+    /* Hack to improve aliasing on mobile/tablet devices */
+}
+
+.hvr-box-shadow-inset:hover, .hvr-box-shadow-inset:focus, .hvr-box-shadow-inset:active {
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0);
+    /* Hack to improve aliasing on mobile/tablet devices */
+}
+
+/**** END OF HOVER EFFECTS ***/
+
+/*********************************************  END OF HEADER  ***************************************/
+
+
+/***********************************************  BODY **********************************************/
+body {
+    background-color: #d3d7eb !important;
+}
+
+.container-fluid {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.container-fluid .container {
+    margin: auto;
+}
+
+.titre {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+.img_car {
+    height: 550px;
+    border-radius: 15px 15px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 250px;
+    perspective: 300px; /* Remove this if you don't want the 3D effect */
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    position: absolute;
+    background-color: dodgerblue;
+    background-color: #194d70;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+.nom {
+    position: relative;
+    top: 80px;
+    left: auto;
+}
+
+.image {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+#carouselExampleIndicators {
+    border: 2px;
+    width: 75% !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+
+}
+
+
+.left {
+    float: left;
+    padding-left: 5%;
+}
+
+.right {
+    float: right;
+    padding-right: 35%;
+}
+
+.container {
+    height: 300px;
+    /*width: auto;*/
+}
+
+
+/****SCROLLBAR***/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #194d70;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #010f19;
+}
+
+/****END OF SCROLLBAR***/
+
+
+/********** back to top button *********/
+
+
+.back-to-top {
+    position: fixed;
+    right: 1%;
+    bottom: 10%;
+    color: rgb(75, 168, 156);
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+}
+
+/********** END back to top button *********/
+
+
+/********************************************************  END OF BODY  **************************************/
+
+/****************************** FOOTER *******************************/
+.panel-footer {
+    margin-top: 100px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: #122636;
+    color: #b2dbe6;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #222;
+    border-top: 0;
+    opacity: .9;
+    width: 100%;
+}
+
+
+.panel-footer div.row {
+    margin-bottom: 25px;
+    margin: auto;
+}
+
+#paiement, #address {
+    line-height: 2;
+}
+
+#paiement > span, #address > span {
+    font-size: 1.3em;
+}
+
+
+*:not(.fas):not(.far) {
+    font-family: Roboto, "Roboto Mono" !important;
+}
+
+.uk-icon > * {
+    transform: translate(0, 0);
+}
+
+svg {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+
+.uk-icon {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    padding: 0;
+    background-color: transparent;
+    display: inline-block;
+    fill: currentcolor;
+    line-height: 0;
+}
+
+.uk-link, a {
+    color: #1e87f0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+user agent stylesheet
+.uk-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+#propos p {
+    color: #336e7c;
+    font-size: .8em;
+    line-height: 1.8;
+}
+
+#testimonials {
+    font-style: italic;
+}
+
+#testimonials p:nth-child(2) {
+    margin-top: 25px;
+}
+
+ul > #uk-iconnav {
+    color: #336e7c;
+}
+
+
+/******************************** END FOOTER *******************************/
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+    /*** HEADER ***/
+    #header-nav > form {
+        display: none;
+    }
+
+    /*** END OF HEADER ***/
+    /*** BODY ***/
+    .container-fluid {
+        align-items: flex-start;
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    /*** END OF BODY ***/
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+    /*** HEADER ***/
+    #header-nav > form {
+        display: none;
+    }
+
+    /*** END OF HEADER ***/
+    /*** BODY ***/
+    .container-fluid {
+        align-items: flex-start;
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    /*** END OF BODY ***/
+
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    /*** HEADER ***/
+    #header-nav {
+        max-height: 20%;
+
+    }
+
+    #collapsable-nav {
+        margin-left: 60%;
+        background-color: #122636;
+        margin-top: -15px;
+        margin-right: -10px;
+
+    }
+
+    #collapsable-nav form {
+        margin-left: 40%;
+        margin-bottom: auto;
+    }
+
+    #collapsable-nav > .button {
+        margin-left: 30%;
+        margin-right: -10%;
+
+    }
+
+    #collapsable-nav form {
+        display: none;
+    }
+
+    #header-nav > form {
+        position: relative;
+        right: -20%;
+        top: -3px;
+        float: left;
+    }
+
+    #searchbar1 {
+        position: relative;
+        right: auto;
+        float: left;
+
+    }
+
+    #header-nav form button {
+        position: relative;
+        right: 0;
+        float: left;
+
+    }
+
+    /*** END HEADER ***/
+    /*** BODY ***/
+    /*.container-fluid{
+      align-items: flex-start;
+      display: flex;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      width: 100%;
+      }*/
+    .container {
+        height: 300px;
+        padding-left: auto;
+        margin-left: 30%;
+    }
+
+    .container-fluid .container {
+        margin-left: 30%;
+    }
+
+    /*** END OF BODY ***/
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+    /* Header */
+    #header-nav {
+        max-height: 20%;
+
+    }
+
+    #collapsable-nav {
+        margin-left: 60%;
+        background-color: #122636;
+        margin-top: -15px;
+        margin-right: -10px;
+    }
+
+    #navbarSupportedContent a {
+        font-size: 1.2em;
+    }
+
+    #navbarSupportedContent a span {
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    #collapsable-nav form {
+        margin-left: 30%;
+    }
+
+    #collapsable-nav > .button {
+        margin-left: 20%;
+        margin-right: -10%;
+        right: -20%;
+
+    }
+
+    #collapsable-nav form {
+        display: none;
+    }
+
+    #header-nav > form {
+        position: relative;
+        right: auto;
+        left: auto;
+        top: -4px;
+        float: left;
+    }
+
+    #searchbar1 {
+        position: relative;
+        right: -20%;
+        float: left;
+        width: 60%;
+
+    }
+
+    #header-nav form button {
+        position: relative;
+        right: -30%;
+        float: left;
+
+    }
+
+
+    /* End Header */
+    /*** BODY ***/
+    #carouselExampleIndicators {
+        visibility: hidden;
+        height: 0em;
+    }
+
+    .container {
+        height: 300px;
+        padding-left: auto;
+        margin-left: 20%;
+    }
+
+    .container-fluid .container {
+        margin-left: 15%;
+    }
+
+    .back-to-top {
+        position: fixed;
+        right: 5% !important;
+
+    }
+
+    /*** END OF BODY ***/
+}
+
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+    /*** HEADER ***/
+    #header-nav {
+        max-height: 10%;
+    }
+
+    #collapsable-nav {
+        margin-left: 40%;
+        background-color: #122636;
+        margin-top: -15px;
+        margin-right: -10px;
+    }
+
+    #collapsable-nav form {
+        margin-left: 50%;
+        right: auto;
+        left: auto;
+
+    }
+
+    #collapsable-nav > .button {
+        margin-left: 20%;
+        margin-right: -5%;
+    }
+
+    #collapsable-nav form {
+        display: none;
+    }
+
+    #header-nav > form {
+        position: relative;
+        top: -5px;
+        float: left;
+        right: auto;
+        left: auto;
+    }
+
+    #searchbar1 {
+        position: relative;
+        float: left;
+        width: 60%;
+        right: 3%;
+
+    }
+
+    #header-nav form button {
+        position: relative;
+        right: 0%;
+        float: left;
+
+    }
+
+    #header-nav > form {
+        width: 40%;
+    }
+
+    /**** END OF HEADER ****/
+    /*** BODY ***/
+    #carouselExampleIndicators {
+        visibility: hidden;
+        height: 0em;
+    }
+
+    .container {
+        height: 300px;
+        position: relative;
+        right: auto;
+        left: -20%;
+    }
+
+
+    .back-to-top {
+        position: fixed;
+        width: 2.5em;
+        height: 2.5em;
+        right: 2% !important;
+
+    }
+
+    /*** END OF BODY ***/
+}
+

@@ -1,0 +1,41 @@
+#dropitem3 a img{
+    width : 50px ;
+    height : 50px ;
+    margin-right: auto;
+    margin-left: auto;
+}
+#ddm3 img{
+    width: 45px;
+    height: 45px;
+    left: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    float: left;
+}
+h5{
+    margin: auto;
+    margin-left: 65px;
+    color: #e4eff1;
+    text-decoration: wavy;
+    font-size: larger;
+    font-style: italic;
+    font-weight: bold;
+    float: none;
+}
+#ddm3 {
+    margin-left: -60px;
+}
+
+/* Style the navbar links */
+#dropitem3 a {
+    color: #b2dbe6;
+    text-align: center;
+    padding: 12px;
+    text-decoration: wavy;
+    font-size: 20px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 15px;
+}

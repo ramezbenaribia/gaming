@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% block title %}
+        Login
+        {% endblock %}
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="{{asset('form_staff/images/icons/favicon.ico')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('form_staff/fonts/iconic/css/material-design-iconic-font.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('form_staff/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('form_staff/vendor/animsition/css/animsition.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('form_staff/vendor/css-hamburgers/hamburgers.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/form_css/util.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/form_css/main.css')}}">
+    {% block style %}
+        <link rel="stylesheet" href="{{ asset('css/Login.css') }}">
+    {% endblock %}
+</head>
+<body>
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form class="login100-form validate-form" method="post">
+					<span class="login100-form-title p-b-26">
+						Welcome To Our Page
+					</span>
+                <span class="login100-form-title p-b-48">
+						<img src="{{ asset('form_staff/images/icons/game-controller.png') }}" alt="home_icon">
+					</span>
+{% block form_content %}
+                <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+                    <input class="input100" type="text" name="email">
+                    <span class="focus-input100" data-placeholder="Email"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+                    <input class="input100" type="password" name="pass">
+                    <span class="focus-input100" data-placeholder="Password"></span>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+                </div>
+{% endblock %}
+                <div class="text-center p-t-115">
+						<span class="txt1">
+							Don’t have an account ?
+						</span>
+
+                    <a class="txt2" href="#">
+                        Sign Up
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="dropDownSelect1"></div>
+
+<script src="{{asset('form_staff/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('form_staff/vendor/animsition/js/animsition.min.js')}}"></script>
+<script src="{{asset('form_staff/vendor/bootstrap/js/popper.js')}}"></script>
+<script src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.js') }}"></script>
+<script src="{{asset('js/form_js/main.js')}}"></script>
+</body>
+</html>
+
+{#<html>#}
+{#<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">#}
+{#<link rel="stylesheet" href="{{ asset('css/form.css')}}">#}
+
+
+{#<!------ Include the above in your HEAD tag ---------->#}
+
+{#<div class="login-reg-panel">#}
+{#    <div class="login-info-box">#}
+{#        <h2>Have an account?</h2>#}
+{#        <p>Lorem ipsum dolor sit amet</p>#}
+{#        <label id="label-register" for="log-reg-show"><a href="{{ path('personne.login') }}">Login</a></label>#}
+{#        <input class="input" type="radio" name="active-log-panel" id="log-reg-show" checked="checked">#}
+{#    </div>#}
+
+{#    <div class="register-info-box">#}
+{#        <h2>Don't have an account?</h2>#}
+{#        <p>Lorem ipsum dolor sit amet</p>#}
+{#        <label id="label-login" for="log-login-show"><a href="{{ path('personne.signin') }}">Register</a></label>#}
+{#        <input class="input" type="radio" name="active-log-panel" id="log-login-show">#}
+{#    </div>#}
+
+{#    <div class="white-panel">#}
+{#        <div class="login-show">#}
+{#            <h2>LOGIN</h2>#}
+{#            {{ form_start(form) }}#}
+{#            {{ form_widget(form.email, {'attr':#}{#}#}
+{#                'class':'input',#}
+{#                'placeholder':'Write your email'#}
+{#            } })}}#}
+{#            {{ form_widget(form.password, {'attr':#}{#}#}
+{#                'class':'input',#}
+{#                'placeholder':'Write your password',#}
+{#                'type':'PasswordType'#}
+{#            } })}}#}
+{#            {{ form_row(form.login, {'attr':#}{#}#}
+{#                'class':'input'#}
+{#            } })}}#}
+
+{#            <a href="">Forgot password?</a>#}
+{#        </div>#}
+{#        <div class="register-show">#}
+{#            <h2>REGISTER</h2>#}
+{#            {{ form_start(form) }}#}
+{#            <div class="row">#}
+{#                <div class="col-6">{{ form_widget(form.name, {'attr':{#}
+{#                        'class':'input',#}
+{#                        'placeholder':'Name',#}
+{#                    } }) }}</div>#}
+{#                <div class="col-6">{{ form_widget(form.firstname, {'attr':{#}
+{#                        'class':'input',#}
+{#                        'placeholder':'Firstname',#}
+{#                    } }) }}</div>#}
+{#            </div>#}
+{#            {{ form_widget(form.age, {'attr':{#}
+{#                'class':'input',#}
+{#                'placeholder':'Age',#}
+{#            } }) }}#}
+{#            {{ form_widget(form.email, {'attr':{#}
+{#                'class':'input',#}
+{#                'placeholder':'Email',#}
+{#            } }) }}#}
+{#            <div class="row">#}
+{#                <div class="col-6">{{ form_widget(form.password, {'attr':{#}
+{#                        'class':'input',#}
+{#                        'placeholder':'Password',#}
+{#                    } }) }}</div>#}
+{#                <div class="col-6"><input class="input" placeholder="repeat password" type="password"></div>#}
+{#            </div>#}
+{#            {{ form_row(form.signin, {'attr':{#}
+{#                'class':'input'#}
+{#            }}) }}#}
+
+{#            <input type="text" placeholder="Email">#}
+{#            <input type="password" placeholder="Password">#}
+{#            <input type="password" placeholder="Confirm Password">#}
+{#            <input type="button" value="Register" class="input">#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>#}
+{#<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>#}
+{#<script src="{{ asset('js/form.js') }}"></script>#}
+{#</html>#}

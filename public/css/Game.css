@@ -1,0 +1,216 @@
+/******** BODY ********/
+.container-fluid {
+    display: flex;
+    background-color: #dbdeeb;
+    box-shadow: 0px 0px 10px black;
+    width: 90%;
+    height: auto;
+    border-radius: 10px ;
+    padding-top: 10px;
+}
+.container-fluid > img {
+    width: 25%;
+    height: 65%;
+    float: left;
+}
+.card {
+    background-color: #d3d7eb;
+    border-radius: 10px ;
+    float: left;
+    margin-bottom: 10px;
+}    
+.card > img {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    border-radius: 10px;
+    left: 5%;
+    top: 5px;
+}
+div.card:nth-child(1) {
+    width: 30%;
+    margin-right: 1.5%;
+}
+div.card:nth-child(2) {
+    width: 900px;
+    margin-bottom: 20px;
+}
+div.card:nth-child(3) {
+    width: 30%;
+    margin-left: 1.5%;
+}
+iframe {
+    width: 95%;
+    height: 300px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+article{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 1px solid #194d70;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 6px #194d70;
+}
+.card-title{
+    text-align: center;
+    font-weight: bold;
+    color: #194d70;
+}
+div  h5 {
+    float: left;
+}
+.text-muted {
+    text-align: center;
+    float: left;
+}
+.card-body .card {
+    background-color: #c1c7df;
+    width: 130px !important;
+    height: 250px !important;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+.card-body .card:nth-child(odd) {
+    margin-left: -9px;
+    
+}
+.card-body .card img {
+    width: 110px;
+    height: 150px;
+    position: relative;
+    border-radius: 10px;
+    left: 5%;
+    top: 5px;
+}
+.card-body .card a{
+    color: black;
+    font-style: normal;
+    font-family: Roboto, "Roboto Mono" !important;
+    text-decoration: none;
+}
+.card-body .card .card-body{
+    padding: auto;
+}
+.card-body .card:nth-child(3) {
+    margin-left: -10px;
+}
+
+
+/******* END OF BODY ******/
+
+
+
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) and (max-width: 1525px) {
+    /*** BODY ***/
+    .card-body .card {
+        float: none;
+        left: 7%;
+        margin: unset;
+        margin-left: 5% !important;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+    /*** END OF BODY ***/
+  }
+  
+  /********** Medium devices only **********/
+  @media (min-width: 992px) and (max-width: 1199px) {
+
+    /*** BODY ***/
+    .card-body .card {
+        float: none;
+        margin: unset;
+        margin-left: 5% !important;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+    
+    /*** END OF BODY ***/
+  
+  }
+  
+  /********** Small devices only **********/
+  @media (min-width: 768px) and (max-width: 991px) {
+    /*** BODY ***/
+    
+    div.card:nth-child(1) {
+        width: auto;
+        height: auto;
+        
+    }
+    div.card:nth-child(2) {
+        width: auto;
+    }
+    div.card:nth-child(3) {
+        display: none;
+        width: auto;
+    }
+
+    .card > img {
+        height: auto;
+    }
+    /*** END OF BODY ***/
+  }
+  
+  /********** Extra small devices only **********/
+  @media (max-width: 767px) {
+
+    /*** BODY ***/
+    
+
+    div.card:nth-child(1) {
+        width: 3000px ;
+        height: 90%;
+       
+    }
+    div.card:nth-child(2) {
+        width: auto;
+    }
+    div.card:nth-child(3) {
+        display: none;
+        width: auto;
+    }
+    .card > img {
+        height: auto;
+    }
+
+    /*** END OF BODY ***/
+  }
+  
+  
+  /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+  @media (max-width: 479px) {
+    
+    /*** BODY ***/
+    .container-fluid {
+        flex-direction: column;
+    }
+
+    div.card:nth-child(1) {
+        width: 90%;
+        margin: auto;
+        margin-bottom: inherit;
+    }
+    div.card:nth-child(2) {
+        width: auto;
+     
+    }
+    div.card:nth-child(3) {
+        display: none;
+    }
+
+    .card > img {
+        height: auto;
+    }
+
+    /*** END OF BODY ***/
+  }
+  
+  

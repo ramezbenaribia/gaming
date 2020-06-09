@@ -1,0 +1,46 @@
+{% extends 'Admin/notifications.html.twig' %}
+{% block style %}
+    <link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.css') }}">
+{% endblock %}
+{% block content %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.flashes('error') %}
+        <div class="alert alert-error">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <table class="table table-hover">
+        <tr>
+            <th>Game Name</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>image</th>
+            <th>Actions</th>
+        </tr>
+        {% for game in games %}
+        <tr>
+            <td>{{ game.label }}</td>
+            <td>{{ game.categorie }}</td>
+            <td>{{ game.desccription }}</td>
+            <td><img src="{{ asset(game.image) }}" alt="" class="rounded-circle" width="50px" height="50px"></td>
+            <td>
+                <a href="{{ path('game.delete', {'id': game.id}) }}">
+                    <i class="fa fa-trash fa-2x" aria-hidden="true"></i>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+        </table>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination" style="text-align: center">
+            {% for p in 1..nbpage %}
+            <li class="page-item"><a href="{{ path('gestion_jeux', {'page': p}) }}" class="page-link">{{ p }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endblock %}

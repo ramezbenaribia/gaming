@@ -1,0 +1,65 @@
+{% extends 'personne/login.html.twig' %}
+{% block style %}
+    <link rel="stylesheet" href="{{ asset('css/Signin.css') }}">
+{% endblock %}
+{% block title %}
+Sign in
+{% endblock %}
+{% block form_content %}
+    {{ form_start(form) }}
+    <div class="row">
+    <div class="wrap-input100 col-6">
+        {{ form_widget(form.name, {'attr':{
+            'class':'input100',
+            'type':'text',
+        } }) }}
+        <span class="focus-input100" data-placeholder="Name"></span>
+    </div>
+    <div class="wrap-input100 col-6">
+        {{ form_widget(form.firstname, {'attr':{
+            'class':'input100',
+            'type':'text',
+        } }) }}
+        <span class="focus-input100" data-placeholder="Firstname"></span>
+    </div>
+    </div>
+
+    <div class="wrap-input100">
+        {{ form_widget(form.age, {'attr':{
+            'class':'input100',
+            'type':'text',
+        } }) }}
+        <span class="focus-input100" data-placeholder="Age"></span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+        {{ form_widget(form.email, {'attr':{
+            'class':'input100',
+            'type':'text',
+        } }) }}
+        <span class="focus-input100" data-placeholder="Email"></span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+        {{ form_widget(form.password, {'attr':{
+            'class':'input100',
+        } }) }}
+        <span class="focus-input100" data-placeholder="Password"></span>
+    </div>
+    <div class="container-login100-form-btn">
+        <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            {{ form_widget(form.sign_in, {'attr':{
+                'class':'login100-form-btn',
+            } }) }}
+        </div>
+    </div>
+
+{% endblock %}
+
+{#{% block log_sign %}#}
+{#    Sign in#}
+{#{% endblock %}#}

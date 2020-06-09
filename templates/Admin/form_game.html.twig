@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/form_css/form_game.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="back"></div>
+<div class="registration-form">
+    <header>
+        <h1>Add Game</h1>
+        <p>Fill in all informations</p>
+    </header>
+    {#{{ form(form_game) }}#}
+    <form class="login100-form validate-form" method="post">
+        {{ form(form_game) }}
+        {#        <div class="input-section name-section">#}
+        {#            #}
+        {#            <input class="name input" placeholder="GAME NAME"/>#}
+        {#            <div class="animated-button"><span class="icon1"><i class="fa fa-gamepad" aria-hidden="true"></i></span><span class="next-button name"><i class="fa fa-arrow-up"></i></span></div>#}
+        {#        </div>#}
+
+        {#        <div class="input-section category-section folded">#}
+        {#            <input class="category input" placeholder="CATEGORY"/>#}
+        {#            <div class="animated-button"><span class="icon2"><i class="fa fa-address-card" aria-hidden="true"></i></span><span class="next-button category"><i class="fa fa-arrow-up"></i></span></div>#}
+        {#        </div>#}
+
+        {#        <div class="input-section description-section folded">#}
+        {#            <input class="description input" placeholder="DESCRIPTION"/>#}
+        {#            <div class="animated-button"><span class="icon3"><i class="fa fa-lock"></i></span><span class="next-button description"><i class="fa fa-paper-plane"></i></span></div>#}
+        {#        </div>#}
+
+        {#        <div class="input-section image-section" style="z-index: 1">#}
+        {#            <input class="image input" placeholder="IMAGE PATH"/>#}
+        {#            <div class="animated-button"><span class="icon4"><i class="fa fa-picture-o" aria-hidden="true"></i></span><span class="next-button image"><i class="fa fa-arrow-up"></i></span></div>#}
+        {#        </div>#}
+
+        {#        <div class="success">#}
+        {#            <p>GAME ADDED WITH SUCCESS</p>#}
+        {#        </div>#}
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.js') }}"></script>
+<script src="{{ asset('js/form_game.js') }}"></script>
+</body>
+</html>

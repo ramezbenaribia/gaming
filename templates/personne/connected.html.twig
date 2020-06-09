@@ -1,0 +1,30 @@
+{% extends 'home/home.html.twig' %}
+
+{% block icon %}
+    <link rel="icon" type="image/png" href="{{asset('form_staff/images/icons/game-controller.png')}}"/>
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ asset('css/Connected.css') }}">
+{% endblock %}
+
+{% block connexion %}
+
+    <div class="nav-item dropdown" id="dropitem3">
+        <a class="nav-link dropdown-toggle hvr-grow-shadow" href="#" id="navbarDropdown" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+            <img src="{{ asset('images/user_default.png') }}"  class="rounded-circle" alt="user.image">
+        </a>
+        <div class="dropdown-menu " id="ddm3" aria-labelledby="navbarDropdown">
+            <img src="{{ asset('images/user_default.png') }}" width="45" height="45" class="rounded-circle" alt="user_image">
+            <h5> {{ firsname }} </h5>
+              <h5>{{ name}} </h5>
+            <hr>
+            <a class="dropdown-item hvr-grow-shadow" href="{{ path('personne.edit', {'name': "name" ,'firstname': "firstname" } ) }}"> Profile  </a>
+            <a class="dropdown-item hvr-grow-shadow" href="#">My Games</a>
+            <a class="dropdown-item hvr-grow-shadow" href="{{asset('home') }}">Deconnexion</a>
+
+        </div>
+    </div>
+{% endblock %}
